@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="360" orientation="Landscape" columnWidth="567" leftMargin="14" rightMargin="14" topMargin="14" bottomMargin="14" uuid="7573f0ac-cb96-46f2-ae8d-9241b12d5594">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     
+     salary.`salaryID` AS salary_salaryID,
+     salary.`EmployeeID` AS salary_EmployeeID,
+     salary.`EmployeeName` AS salary_EmployeeName,
+     salary.`EmployeePosition` AS salary_EmployeePosition,
+     salary.`BasicSalary` AS salary_BasicSalary,
+     salary.`DaysRendered` AS salary_DaysRendered,
+     salary.`DaysLeave` AS salary_DaysLeave,
+     salary.`Total` AS salary_Total,
+     salary.`SSSdeduction` AS salary_SSSdeduction,
+     salary.`PHdeduction` AS salary_PHdeduction,
+     salary.`PAGIBIG` AS salary_PAGIBIG,
+     salary.`SubTotal` AS salary_SubTotal,
+     salary.`NetPay` AS salary_NetPay,
+     salary.`Month` AS salary_Month,
+     salary.`Day` AS salary_Day,
+     salary.`Year` AS salary_Year
+FROM
+     `salary`]]>
+	</queryString>
+	<field name="salary_salaryID" class="java.lang.Integer"/>
+	<field name="salary_EmployeeID" class="java.lang.String"/>
+	<field name="salary_EmployeeName" class="java.lang.String"/>
+	<field name="salary_EmployeePosition" class="java.lang.String"/>
+	<field name="salary_BasicSalary" class="java.lang.String"/>
+	<field name="salary_DaysRendered" class="java.lang.String"/>
+	<field name="salary_DaysLeave" class="java.lang.String"/>
+	<field name="salary_Total" class="java.lang.String"/>
+	<field name="salary_SSSdeduction" class="java.lang.String"/>
+	<field name="salary_PHdeduction" class="java.lang.String"/>
+	<field name="salary_PAGIBIG" class="java.lang.String"/>
+	<field name="salary_SubTotal" class="java.lang.String"/>
+	<field name="salary_NetPay" class="java.lang.String"/>
+	<field name="salary_Month" class="java.lang.String"/>
+	<field name="salary_Day" class="java.lang.String"/>
+	<field name="salary_Year" class="java.lang.String"/>
+	<group name="salary_salaryID">
+		<groupExpression><![CDATA[$F{salary_salaryID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="46" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="567" height="46" backcolor="#666666" uuid="ce6df187-d4b6-4f05-abe0-991312fc0689"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="155" y="0" width="262" height="25" forecolor="#FFFFFF" uuid="a1b38b56-1fd5-40af-9859-ee43a69b8b97"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CITY SQUARE MANAGEMENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="26" width="188" height="20" forecolor="#FFFFFF" uuid="7b6fd152-ff45-4fab-bf2e-c8773297f97d"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[MAGSAYSAY DRIVE, OLONGAPO CITY]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="31" y="17" width="100" height="19" uuid="2673b8a6-8723-44b9-ad21-25e497de12bd"/>
+				<text><![CDATA[EMPLOYEE ID:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="36" width="100" height="20" uuid="205074ad-8ffa-4ba4-89c3-1870874a945f"/>
+				<text><![CDATA[EMPLOYEE NAME:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="131" y="16" width="123" height="20" uuid="88371e45-cbde-478e-8717-0c792d934474"/>
+				<textFieldExpression><![CDATA[$F{salary_EmployeeID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="36" width="205" height="20" uuid="2ee23c27-cf5c-40b7-94d7-5b4d1e34ba53"/>
+				<textFieldExpression><![CDATA[$F{salary_EmployeeName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="364" y="16" width="62" height="20" uuid="cfe978e9-5b61-4242-9a5b-654207c0a04e"/>
+				<text><![CDATA[MONTH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="364" y="36" width="62" height="20" uuid="17a9c1a2-9f34-4a84-ad13-4fb2b48e77e1"/>
+				<text><![CDATA[SLIP #]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="426" y="17" width="100" height="20" uuid="b7db4637-91ae-44e5-92fe-7ebba7585e3e"/>
+				<textFieldExpression><![CDATA[$F{salary_Month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="426" y="36" width="100" height="20" uuid="2f257243-64a9-4650-adc5-1165dd77ecca"/>
+				<textFieldExpression><![CDATA[$F{salary_salaryID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="167" splitType="Stretch">
+			<staticText>
+				<reportElement x="31" y="34" width="100" height="20" uuid="1e9aa96d-6510-451f-9704-efd078c31b92"/>
+				<text><![CDATA[BASIC SALARY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="54" width="100" height="20" uuid="a7e5c2fd-5457-4a78-8ed0-ae3110d1982d"/>
+				<text><![CDATA[DAYS RENDERED]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="74" width="100" height="20" uuid="2e22a53b-0260-48cf-a379-fa23c34f5ce0"/>
+				<text><![CDATA[REGULAR HOLIDAY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="94" width="100" height="20" uuid="4c5bd96b-b263-4671-bd23-467722d7ae6a"/>
+				<text><![CDATA[O.T]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="14" width="300" height="20" uuid="53741c3f-c319-4883-b404-d17c53e9d3d5"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BASIC AND BENEFITS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="14" width="200" height="20" uuid="ab29ba14-4231-48cb-be6b-b2e6e61781d7"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEDUCTIONS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="34" width="100" height="20" uuid="5ba7cc5b-7b96-4c23-8d6b-759964d62af0"/>
+				<text><![CDATA[SSS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="54" width="100" height="20" uuid="1a611da7-9746-4b37-a870-d0536304a745"/>
+				<text><![CDATA[PHILHEALTH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="74" width="100" height="20" uuid="421d7fdc-ec6f-4b92-90e9-4fda5c80f46b"/>
+				<text><![CDATA[PAGIBIG]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="443" y="34" width="100" height="20" uuid="b8aa7e19-1668-4322-9775-36cb5399d91e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{salary_SSSdeduction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="54" width="100" height="20" uuid="ad3beb7f-dc9b-4738-8c60-1d8c3010dcc1"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{salary_PHdeduction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="74" width="100" height="20" uuid="41a4137d-177a-4f40-bca6-242660f8d6ea"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{salary_PAGIBIG}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="114" width="100" height="20" uuid="4c28d7bf-7f2e-449e-b0c2-c28221afce00"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[SUB TOTAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="131" y="114" width="200" height="20" uuid="7ac3fbb1-a726-4108-a385-bf366afe8b3b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{salary_Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="34" width="100" height="20" uuid="34ae885b-dfa2-490f-a1ec-a492b97c50e0"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="34" width="100" height="20" uuid="12e9c463-7ce5-4452-84b4-04d1df145775"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{salary_BasicSalary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="54" width="100" height="20" uuid="032c71a6-7845-43e9-97cd-5978b3fb8cb8"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="54" width="100" height="20" uuid="6ed33851-c02a-4721-976d-65df9a375570"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{salary_DaysRendered}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="74" width="100" height="20" uuid="909e9f9b-5df9-4e1d-9309-b44354123abe"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="74" width="100" height="20" uuid="183499bc-d245-44f8-9cf4-46046e067efc"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="94" width="100" height="20" uuid="83e529df-7ec7-4d7d-95e6-15e799cf19c4"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="94" width="100" height="20" uuid="e3bc84dc-ff73-4fce-9643-3d7fbd4d0032"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="343" y="94" width="100" height="20" uuid="6a0689d8-de15-404a-a7c4-a343601ce680"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[TOTAL DEDUCTION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="443" y="94" width="100" height="20" uuid="d50c5d67-3211-435f-b64b-3f48614e3e40"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{salary_SubTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="326" y="147" width="100" height="20" uuid="5dc213ea-b71d-4db3-9bdb-a386a93eb921"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[NETPAY	:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="426" y="147" width="100" height="20" uuid="521671d7-210f-4879-8ac9-97b3e7a552fc"/>
+				<textFieldExpression><![CDATA[$F{salary_NetPay}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="31" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="21" splitType="Stretch">
+			<break>
+				<reportElement x="0" y="16" width="567" height="1" uuid="eca5576e-89fd-4a8b-9213-1a8f7d341083"/>
+			</break>
+		</band>
+	</summary>
+</jasperReport>
